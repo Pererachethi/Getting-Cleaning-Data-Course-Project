@@ -84,3 +84,5 @@ tidyData    = aggregate(finalDataNoActivityType[,names(finalDataNoActivityType) 
  
  # Merging the tidyData with activityType to include descriptive acitvity names
  tidyData    = merge(tidyData,activityType,by='activityId',all.x=TRUE)
+ write.table(tidyData, './tidyData.txt',row.names=TRUE,sep='\t')
+ 
